@@ -4,7 +4,7 @@ from playwright.sync_api import Playwright
 @pytest.fixture
 def basic_set_up(playwright: Playwright):
     #setup browser
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
 
     #setup page
@@ -22,7 +22,7 @@ def basic_set_up(playwright: Playwright):
 @pytest.fixture
 def direct_set_up(playwright: Playwright):
     #setup browser
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
 
     #setup page
